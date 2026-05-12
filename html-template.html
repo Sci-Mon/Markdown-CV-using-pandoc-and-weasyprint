@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$title$</title>
+    <style>
+        /* Grund-Einstellungen */
+        @page {size: A4; margin: 0;}
+        body { 
+            font-family: Arial, Helvetica, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #333;
+            line-height: 1.5;
+        }
+        /* Sidebar-Einträge von WeasyPrint löschen */
+        h1, h2, h3, h4, h5, h6 {
+            bookmark-level: none !important;
+        }
+
+        /* Layout-Container */
+        .main-wrapper { display: table; width: 100%; table-layout: fixed; border-collapse: collapse; }
+
+        /* Linke Spalte */
+        .left-col { 
+            display: table-cell;
+            width: 60mm; 
+            background: #3768B0;
+            box-sizing: border-box;
+            color: white;
+            vertical-align: top;
+        }
+
+        .left-col h2 { font-size: 18pt; margin: 20px 10px 5px 10px; font-weight: bold;}
+	.left-col h3 { font-size:14pt; margin: 20px 10px 5px 10px; font-weight: bold;}
+        .left-col img { display: block; width: 100%; height: auto; margin: 0 auto; padding-top: 0px;}
+		.left-col ul {font-size: 12pt; list-style: none; padding: 0; margin: 0px 10px 0px 10px;}
+		.left-col li a {color: white; text-decoration: none; font-size: 12pt;}
+        .left-col li { margin-top: 5px; margin-bottom:10px; line-height: 1;}
+        .left-col li em { font-style: normal; color: #a5c9eb;}
+        .left-col p { margin: 0px 0px; }
+
+        /* Rechte Spalte */
+        .right-col {
+            display: table-cell;
+            background-color: #ffffff; 
+            padding: 10px 20px;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .right-col h1 { font-size: 68px; color: #3768B0; margin: 10px 0 4px 0; line-height: 0.95; }
+        .right-col h2 { font-size: 16pt; color: #3768B0; margin: 0px; }
+        .right-col h3 { font-size: 13pt; color: #3768B0; margin-top: 5px; margin-bottom: 0px;}
+        .right-col h4 { font-size: 11pt; color: #000000; margin-top: 3px; margin-bottom: 0px}
+        .right-col h5 { font-size: 10pt; color: #3768B0; margin: 0px; font-weight: normal;}
+        .right-col p, .right-col li { font-size: 10pt; color: #333333; }
+        .right-col hr {border: none; border-top: 2px solid #3768B0; margin: 10px 0;}
+        .right-col ul { padding-left: 20px; margin-top: 0px; margin-bottom: 14px;}
+
+        /* FIX: Attachments über die ganze Breite */
+        .attachments { 
+            display: table-caption; /* Erzwingt das Ausbrechen aus dem Spalten-Raster */
+            caption-side: bottom;    /* Platziert es unter die Tabellen-Zellen */
+            width: 90%;
+            background-color: #ffffff; 
+            padding: 20px;
+            box-sizing: border-box;
+	        margin:20px;
+        }
+        
+        .attachments img { display: block; width: 90%; height: auto; margin-top: 50px; padding-top: 50px; }
+        /* Druck-Optimierung */
+        @media print {
+            body { -webkit-print-color-adjust: exact; }
+            .main-wrapper { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-wrapper">
+        $body$
+        <!-- Falls die Attachments nicht Teil von $body$ sind, hier einfügen: -->
+        <!-- <div class="attachments">Inhalt über die volle Breite</div> -->
+    </main>
+
+</body>
+</html>
