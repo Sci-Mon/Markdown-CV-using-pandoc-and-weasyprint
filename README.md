@@ -6,11 +6,12 @@ description: [create a CV using Markdown, pandoc and weasyprint]
 tags: [CV, curriculum vitae, Lebenslauf]
 ---
 
-# Markdown CV (german language)
+# 📜 Markdown CV (german language)
 
-## Goal
+## 🎯 Goal
 
-My goal is it to skip any office application and edit the CV using simple Markdown
+My goal is it to skip any office application and edit the CV using simple
+[Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
 with the help of [pandoc](https://pandoc.org/) and [weasyprint](https://weasyprint.org).
 
 **Advantages**
@@ -22,7 +23,7 @@ with the help of [pandoc](https://pandoc.org/) and [weasyprint](https://weasypri
 * no CPU hunger.
 * text-based
 
-## Installation And Dependencies
+## 📦 Installation And Dependencies
 
 * use Linux (or at least a *nix like operatingsystem
 * `sudo apt install make` (please tell me that you have already installed it)
@@ -30,7 +31,7 @@ with the help of [pandoc](https://pandoc.org/) and [weasyprint](https://weasypri
 * `sudo apt install weasyprint`
 * any editor you like and prefer
 
-## Usage
+## M↓ Usage
 
 * edit cv.md to your needs
 * replace bilder/photo.jpg
@@ -38,6 +39,7 @@ with the help of [pandoc](https://pandoc.org/) and [weasyprint](https://weasypri
 * run `make`
 * use your favourite PDF viewer to check the result
 
-## Bugs
+## 🐞 Bugs
 
 Yes. Suggestions for improvement and fixes are welcome.
+
